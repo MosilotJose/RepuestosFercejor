@@ -1,0 +1,20 @@
+/*
+Custom Css
+*/
+
+.form-control {
+    position: relative;
+    display: inline-block;
+}
+
+.form-control select {
+    padding-right: 30px; /* Espacio para el icono */
+}
+
+.form-control i {
+    position: absolute;
+    right: 5px; /* Ajusta la posición del icono a tu gusto */
+    top: 50%; /* Lo coloca verticalmente en el centro */
+    transform: translateY(-50%);
+}
+
