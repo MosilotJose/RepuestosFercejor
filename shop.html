@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!--
     
@@ -32,21 +33,60 @@ https://templatemo.com/tm-559-zay-shop
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@fercejor.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none"
+                        href="mailto:info@company.com">info@fercejor.com</a>
                     <i class="fa fa-phone mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">960-454-537</a>
                 </div>
                 <div>
-                    <a class="text-light" href="https://facebook.com" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://whatsapp.com/" target="_blank"><i class="fab fa-whatsapp fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    <a class="text-light" href="https://facebook.com" target="_blank" rel="sponsored"><i
+                            class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
+                            class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://whatsapp.com/" target="_blank"><i
+                            class="fab fa-whatsapp fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fab fa-linkedin fa-sm fa-fw"></i></a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- Close Top Nav -->
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body table-responsive">
+                    <table id="lista-carrito" class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>
+                                    <!-- <p class="boton_eliminar">X</p> -->
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="carrote">
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a id="vaciar-carrito" class="btn btn-danger d-flex justify-content-center" href="#">Vaciar Carrito</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
@@ -56,11 +96,14 @@ https://templatemo.com/tm-559-zay-shop
                 Fercejor
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
@@ -86,17 +129,21 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal"
+                        data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+
+                        <!-- <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                        </span> -->
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="index.html">
-                        <i class="fa fa-fw fa-user text-dark mr-3" ></i> 
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         Inicia Sesión
-                    </a>                     
+                    </a>
                 </div>
             </div>
 
@@ -105,7 +152,8 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Close Header -->
 
     <!-- Modal -->
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="w-100 pt-1 mb-5 text-right">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -147,37 +195,37 @@ https://templatemo.com/tm-559-zay-shop
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Baterías
                             <i class="fa-solid fa-circle-chevron-right"></i>
-                        </a>                        
+                        </a>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Desabolladura y Pintura
                             <i class="fa-solid fa-circle-chevron-right"></i>
-                        </a>                        
+                        </a>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Amortiguadores
                             <i class="fa-solid fa-circle-chevron-right"></i>
-                        </a>                        
+                        </a>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Aceites y Grasas
                             <i class="fa-solid fa-circle-chevron-right"></i>
-                        </a>                        
+                        </a>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Refrigerantes
                             <i class="fa-solid fa-circle-chevron-right"></i>
-                        </a>                        
+                        </a>
                     </li>
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
                             Repuestos
                             <i class="fa-solid fa-circle-chevron-right"></i>
-                        </a>                        
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -186,7 +234,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="">
-                            <a >
+                            <a>
                                 <h6>Mostrando 1–6 de 18 resultados</h6>
                             </a>
                             <!--<li class="list-inline-item">
@@ -200,27 +248,31 @@ https://templatemo.com/tm-559-zay-shop
                             </li>-->
                         </ul>
                     </div>
-                    <div class="col-md-6 pb-4" >
+                    <div class="col-md-6 pb-4">
                         <div class="d-flex">
                             <select class="form-select" aria-label="Default select example">
                                 <option value="mejor oferta">Mejor oferta</option>
                                 <option value="mejor coincidencia">Mejor coincidencia</option>
                                 <option value="menor-precio">Menor precio</option>
                                 <option value="mayor-precio">Mayor precio</option>
-                              </select>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div id="lista-productos" class="row">
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_01.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -229,11 +281,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>Modelo D-5103</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -245,7 +302,11 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a  href="#" class="btn btn-primary text-white fw-bold agregar-producto"  data-id="1"  >Añadir</a>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -253,11 +314,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_02.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -266,11 +331,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>70AH/560A</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -282,7 +352,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto" data-id="2" href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -290,11 +363,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_03.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -303,11 +380,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>Carburo de Silicio 4"</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -319,7 +401,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/50.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/50.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto"  data-id="3"  href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -327,11 +412,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_04.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -340,11 +429,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>Renault original</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -356,7 +450,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto"  data-id="4" href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -364,11 +461,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_05.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -377,11 +478,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>Magnatex ST-ST 5W-30 A5</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -393,7 +499,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto"  data-id="5" href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -401,24 +510,34 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_06.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h3 text-decoration-none">Refrigerante / Anticongelante</a>
+                                <a href="shop-single.html" class="h3 text-decoration-none">Refrigerante /
+                                    Anticongelante</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>Bardahl al 50% GLN</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -430,7 +549,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto"  data-id="6" href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -438,11 +560,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_07.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -451,11 +577,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>TIIDA MR18,HR16 2007-2017</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -467,7 +598,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto"  data-id="7" href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -475,11 +609,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_08.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -488,11 +626,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>Modelo Universal 6PR TT</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -504,7 +647,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold agregar-producto"  data-id="8" href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -512,11 +658,15 @@ https://templatemo.com/tm-559-zay-shop
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_09.svg">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <div
+                                    class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
+                                                    class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                                    class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -525,11 +675,16 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>12V 35/35W PX43t-38 C1</li>
                                     <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
@@ -541,7 +696,10 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">S/250.00</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4 ">
+                                    <p class="text-center mb-0 fw-bold">S/250.00</p>
+                                    <a class="btn btn-primary text-white fw-bold  agregar-producto" data-id="9"  href="#">Añadir</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -549,10 +707,12 @@ https://templatemo.com/tm-559-zay-shop
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
                         <li class="page-item disabled">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
+                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#"
+                                tabindex="-1">1</a>
                         </li>
                         <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
+                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark"
+                                href="#">2</a>
                         </li>
                         <li class="page-item">
                             <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
@@ -575,7 +735,8 @@ https://templatemo.com/tm-559-zay-shop
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            <a class="text-decoration-none" href="https://maps.app.goo.gl/NA9WzAoHocnfTeeNA">C. Higueras, Puente Piedra 15121</a>
+                            <a class="text-decoration-none" href="https://maps.app.goo.gl/NA9WzAoHocnfTeeNA">C.
+                                Higueras, Puente Piedra 15121</a>
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
@@ -621,23 +782,28 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                    class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank"
+                                href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://whatsapp.com/"><i class="fab fa-whatsapp fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://whatsapp.com/"><i
+                                    class="fab fa-whatsapp fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank"
+                                href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-auto">
                     <label class="sr-only" for="subscribeEmail">Email address</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Correo electrónico">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
+                            placeholder="Correo electrónico">
                         <div class="input-group-text btn-success text-light">Suscribite</div>
                     </div>
                 </div>
@@ -649,7 +815,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Fercejor 
+                            Copyright &copy; 2021 Company Fercejor
                             | Designed by <a rel="sponsored" href="https://fercejor.com" target="_blank">Fercejor</a>
                         </p>
                     </div>
@@ -667,6 +833,7 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="https://kit.fontawesome.com/cf2595e9b0.js" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
     <!-- End Script -->
 </body>
 
